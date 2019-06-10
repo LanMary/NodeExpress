@@ -1,0 +1,20 @@
+{
+    "name": "SERVER",
+    "version": "0.0.1",
+    "private": "true",
+    "main": "Pug.js",
+    "scripts": {
+        "start": "nodemon Pug.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "*",
+        "lowdb": "^1.0.0",
+        "pug": "^2.0.3",
+        "shortid": "^2.2.14"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1"
+    }
+    
+}

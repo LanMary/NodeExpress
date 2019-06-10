@@ -1,0 +1,16 @@
+html
+    head
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+        link(rel="stylesheet", href="style/custum.css")
+    body
+        nav.navbar.navbar-light.bg-light
+            a.navbar-brand(href='/') Home
+            a.navbar-brand(href='/users') User
+            //- a.navbar-brand(href='#') Contact
+            form.form-inline(action="#" method="GET")
+                input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+                button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+
+        .contrainer.pt-5
+            block content
+    
