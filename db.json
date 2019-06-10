@@ -2,7 +2,10 @@
   "users": [
     {
       "name": "Lan",
-      "id": "mr_-qd4eX"
+      "id": "mr_-qd4eX",
+      "phone": "0332490704",
+      "email": "lanmtgtv@gmail.com",
+      "password": "555266"
     },
     {
       "name": "Mary",
@@ -25,6 +28,11 @@
       "name": "long",
       "phone": "03123123",
       "id": "u1htJLo49"
+    },
+    {
+      "name": "Mai",
+      "phone": "0332490704",
+      "id": "fJK0dtJFv"
     }
   ]
 }

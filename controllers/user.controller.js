@@ -21,6 +21,7 @@ module.exports.search = function(req,res){
 };
 
 module.exports.create = function(req,res){
+    console.log(req.cookies);
     res.render("users/create");
 };
 
@@ -37,21 +38,6 @@ module.exports.get = function(req,res){
 module.exports.postCreate = function(req,res){
     // users.push(req.body);//lưu trữ thông tin user gửi lên->pug
     req.body.id = shortid.generate();
-    var err = [];
-
-    if(!req.body.name){
-        err.push('Name is require!');
-    }
-    if(!req.body.phone){
-        err.push('Phone is require!');
-    }
-    if(err.length){
-        res.render('users/create',{
-            err: err,
-            values: req.body
-        });
-        return;
-    }
     db.get('users').push(req.body).write();
     res.redirect("/users");
 };

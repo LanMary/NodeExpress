@@ -3,7 +3,10 @@ extends ../layouts/common
 block content
     h1 View User
 
-    p
-        b Name:
-        span &nbsp;
-        span= user.name
+    table.table
+        tr 
+            td Name:&nbsp;
+                span= user.name 
+        tr 
+            td Phone: &nbsp;
+                span= user.phone
