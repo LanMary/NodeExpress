@@ -4,13 +4,15 @@
     "private": "true",
     "main": "Pug.js",
     "scripts": {
-        "start": "nodemon Pug.js"
+        "start": "nodemon --inspect Pug.js"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
         "cookie-parser": "^1.4.4",
+        "dotenv": "^8.0.0",
         "express": "*",
         "lowdb": "^1.0.0",
+        "md5": "^2.2.1",
         "pug": "^2.0.3",
         "shortid": "^2.2.14"
     },
