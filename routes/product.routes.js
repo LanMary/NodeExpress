@@ -7,3 +7,5 @@ var router = express.Router();
 
 router.get('/index',controller.product);
 module.exports= router;
+
+
