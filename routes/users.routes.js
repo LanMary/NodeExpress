@@ -1,9 +1,11 @@
 var express = require('express');
+var multer = require('multer');
 
 //require from project 
 var controller = require('../controllers/user.controller');
 var validate = require('../validate/user.validate');
 
+var upload = multer({ dest: './public/uploads/' })
 
 var router = express.Router();
 module.exports= router;
@@ -21,4 +23,7 @@ router.get("/create",controller.create);
 
 router.get('/:id',controller.get);
 
-router.post("/create",validate.postCreate,controller.postCreate);
+router.post("/create",
+    upload.single('avatar'),//middleware
+    validate.postCreate,
+    controller.postCreate);
