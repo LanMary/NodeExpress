@@ -4,9 +4,13 @@ html
         link(rel="stylesheet", href="../public/style/custum.css")
     body
         nav.navbar.navbar-light.bg-light
+            //- a(href='#')
+            //-     img(src="../images/mon.jpg")(style="width:50;height:50")
             a.navbar-brand(href='/') Home
             a.navbar-brand(href='/users') User
-            //- a.navbar-brand(href='#') Contact
+            a.navbar-brand(href='/products') Products
+            a.navbar-brand(href='/users') Cart
+            a.navbar-brand(href='#') Contact
             form.form-inline(action="#" method="GET")
                 input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
                 button.btn.btn-outline-success.my-2.my-sm-0 Search

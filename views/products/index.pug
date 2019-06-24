@@ -1,7 +1,7 @@
 extends ../layouts/common
 
 block content
-    h1 User
+    h1 Product
     .d-flex.align-items-center
 
         form.ml-auto(action="/users/search" method="GET", class="d-flex")
@@ -10,16 +10,18 @@ block content
     br
     .row(style='padding:10px;text-align:center; ')
         each product in products
-            .col-sm-4(style='background-color:yellow;padding:5px;')
-                b=product.name
-                br
-                span= product.price
-                br
-                img(src= product.image)
-                br
-                span= product.description
-                br
-                .btn.btn-primary Add to cart
+            .col-sm-6.col-md-4.col-lg-3(style='background-color:yellow;padding:5px;')
+                .card.mb-3
+                    b=product.name
+                    br
+                    span= product.price
+                    br
+                    img.card(src= product.image, height=200)
+                    br
+                    span= product.description
+                    br
+                    //- href='/cart/add/:productId'
+                    a.btn.btn-primary.w-30.m-auto(href='/cart/add/' + product.id ) Add to cart
 
     ul.ml-auto(class="pagination pagination-sm")
         li(class="page-item")
